@@ -1,0 +1,62 @@
+/**
+ * Example of a SCSS file for themes
+ * Here I change all the title text to white because I like to have a large
+ * image as the backdrop of a new section. 
+ */
+
+/*-- scss:defaults --*/
+$body-color: #000 !default;
+$presentation-font-size-root: 28px; /* Reduce the base text size */
+$link-color: #689f38;
+
+/* Change code text size */
+.reveal code,
+.reveal pre,
+.reveal pre code,
+.reveal .cell-code,
+.reveal .cell-code pre,
+.reveal .cell-code code,
+.reveal .cell-output,
+.reveal .cell-output pre,
+.reveal .cell-output code {
+  font-size: 0.85em !important;
+}
+
+.reveal pre:not(.sourceCode) > code {
+  background-color: #f0f1f1;
+}
+
+/*  Defines the style of the highlights - I use them for section breaks */
+.highlight {
+  background-color: purple;
+  color: white; 
+}
+
+/* Title text */
+.reveal .title {
+  color: white;
+}
+
+/* Subtitle */
+.reveal .subtitle {
+  color: white;
+}
+
+/* Author / date */
+.reveal .author {
+  color: white;
+}
+.reveal .date {
+  color: white;
+}
+
+/* Make all title-slide text white to stand out against image */
+.reveal .slides section.title-slide,
+.reveal .slides section.title-slide h1,
+.reveal .slides section.title-slide h2,
+.reveal .slides section.title-slide h3,
+.reveal .slides section.title-slide p,
+.reveal .slides section.title-slide .author, /* seems to not work */
+.reveal .slides section.title-slide .date {
+  color: darkgray !important;
+}
