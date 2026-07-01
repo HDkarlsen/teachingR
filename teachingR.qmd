@@ -19,7 +19,27 @@ params:
   hide_answers: true
 ---
 
-## Introduction
+## {background-image="img/redpanda.jpg"}
+
+::: {.absolute top="0%" left="5%" style="font-size:1.2em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, .5); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+
+::: {.bigger style="font-size:2em"}
+
+Teaching R with R
+
+:::
+
+::: {.bigger style="font-size:1.3em"}
+
+How to get started doing lectures with Quarto and reveal.js
+
+:::
+
+Håvard R. Karlsen, NTNU -- date: 2026-07-09
+
+:::
+
+## Introduction 
 
 :::: {.columns}
 
@@ -338,12 +358,14 @@ Render the documents once with each parameter value (`true/false`) for both vers
 
 To produce a slide that acts as a divider, use some html: 
 
-**Insert image of slide.**
-
 ```html
 # <span style="color: white;">Example of a nice section 
 divider slide</span> {background-image="img/raccoon.jpg"}
 ```
+
+::: aside
+Photo by <a href="https://unsplash.com/@photosimon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Simon Infanger</a> on <a href="https://unsplash.com/photos/animal-on-tree-branch-hgdh6IwKi7Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+:::
 
 ## Styling/theming with scss
 
@@ -401,7 +423,7 @@ Concluding tips
 
 ::: {.column width="50%"}
 
-This presentation and all relevant materials can be found at GitHub. Feel free to use it as an inspiration for your next slides. 
+This presentation and all relevant materials can be found at [GitHub](https://github.com/HDkarlsen/teachingR). Feel free to use it as an inspiration for your next slides. 
 
 ::: {.fragment}
 
