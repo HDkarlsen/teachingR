@@ -423,7 +423,7 @@ Concluding tips
 
 ::: {.column width="50%"}
 
-This presentation and all relevant materials can be found at [GitHub](https://github.com/HDkarlsen/teachingR). Feel free to use it as an inspiration for your next slides. 
+This presentation and all relevant materials can be found at [GitHub](https://github.com/HDkarlsen/teachingR){style="color:blue;"}. Feel free to use it as an inspiration for your next slides. 
 
 ::: {.fragment}
 
@@ -433,8 +433,8 @@ This presentation and all relevant materials can be found at [GitHub](https://gi
 
 ::: {.smaller style="font-size:0.6em"}
 
-Photo by [Jonatan Pie](https://unsplash.com/@r3dmax) on
-[Unsplash](https://unsplash.com/photos/gray-and-white-fox-on-top-of-mountain-vOVXTRXbApg).
+Photo by [Jonatan Pie](https://unsplash.com/@r3dmax){style="color:blue;"} on
+[Unsplash](https://unsplash.com/photos/gray-and-white-fox-on-top-of-mountain-vOVXTRXbApg){style="color:blue;"}.
 
 ::: 
 
