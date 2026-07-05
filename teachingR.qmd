@@ -67,14 +67,15 @@ Håvard R. Karlsen
 
 Assumed knowledge not covered here: The basics of reveal.js slidecrafting. See [The Quarto docs guide on reveal.js](https://quarto.org/docs/presentations/revealjs/).
 
+See code to generate these slides at [GitHub](https://github.com/HDkarlsen/teachingR)
 
 :::
 
 ::::
 
-## To make the slides use the entire screen
+## Make sure to use the right aspect ratio
 
-A common problem: images move or change size, or slide don't fill the available screen real estate. 
+To use all available screen real estate. 
 
 $$
 \text{Aspect ratio} = \frac{\text{width}}{\text{height}}
@@ -84,7 +85,7 @@ $$
 
 - My laptop: $\frac{1050}{682.26} = 1.539$
 
-Make sure you have the right aspect ratio defined in the YAML. 
+Define a custom aspect ratio in the YAML: 
 
 ```{yaml filename = "yaml"}
 format: 
@@ -92,36 +93,14 @@ format:
     height: 682.26
 ```
 
-## Relative positioning
-
-**Relative positioning**: Loosely define placement in slide. Hard to control, but works across file formats (reveal.js, beamer, etc.) and aspect ratios.
-
-```
-![](img/otters.jpg){fig-align="right" height=300}
-```
-
-![](img/otters.jpg){fig-align="right" height=300}
-
-::: aside 
-
-Photo by [Emily Nelson](https://unsplash.com/@nelson_96) on [Unsplash](https://unsplash.com/photos/group-of-animals-on-tree-branch-during-daytime-O0sa7pu4xTE)
-
-::: 
-
-See [Emil Hvitfeldts post about slidecrafting](https://emilhvitfeldt.com/post/slidecraft-layout/) or his [book on the same subject](https://slidecrafting-book.com/) for more tips.
-
-::: {.notes}
-Need both height and width. With only widht, no image. With only height, image is only one size. With both, only width will change the size.
-:::
 
 ## Absolute positioning
-
 
 :::: {.columns}
 
 ::: {.column width="40%"}
 
-**Absolute positioning**: Full control of placement, but often breaks in other formats or aspect ratios. 
+**Absolute positioning**: Full control of placement of content, but often breaks in other formats or aspect ratios. Vs. **relative positioning**.
 
 ```
 ![](img/seaotters.jpg){.absolute top="-10%" right="-40%" height="100%"}
@@ -142,7 +121,22 @@ Need both height and width. With only widht, no image. With only height, image i
 
 Do note that the text will not respect the image with absolute positioning so that you might get overlaps. 
 
+:::: {.columns}
+
+::: {.column width="40%"}
+
 *To avoid overlap, use columns.*
+
+See [Emil Hvitfeldts post about slidecrafting](https://emilhvitfeldt.com/post/slidecraft-layout/) or his [book on the same subject](https://slidecrafting-book.com/) for more tips.
+
+:::
+
+::: {.column width="60%"}
+
+:::
+
+::::
+
 
 ::: aside
 
@@ -255,9 +249,6 @@ penguins |>
 
 ### Presentation
 
-Task: use filter out Gentoo penguins and display a summary of body mass. 
-
-
 ```{r}
 #| output-location: fragment
 
@@ -354,18 +345,22 @@ Render the documents once with each parameter value (`true/false`) for both vers
 
 # <span style="color: white;">Example of a nice section divider slide</span> {background-image="img/raccoon.jpg"}
 
-## Nice section dividers
-
-To produce a slide that acts as a divider, use some html: 
+::: {.absolute bottom="-120%" style="font-size:0.8em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, .5); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
 
 ```html
 # <span style="color: white;">Example of a nice section 
 divider slide</span> {background-image="img/raccoon.jpg"}
 ```
 
-::: aside
-Photo by <a href="https://unsplash.com/@photosimon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Simon Infanger</a> on <a href="https://unsplash.com/photos/animal-on-tree-branch-hgdh6IwKi7Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 :::
+
+
+::: {.absolute bottom="-150%" right="0%" style="font-size:0.6em;  padding: 0.1em 0.1em; background-color: rgba(255, 255, 255, 1); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .1); border-radius: 5px;"}
+
+Photo by [Jonatan Pie](https://unsplash.com/@r3dmax){style="color:blue;"} on
+[Unsplash](https://unsplash.com/photos/gray-and-white-fox-on-top-of-mountain-vOVXTRXbApg){style="color:blue;"}.
+
+::: 
 
 ## Styling/theming with scss
 
@@ -384,7 +379,7 @@ format:
 ```{.scss filename="mystyle.scss"}
 $body-color: #000 !default;
 $presentation-font-size-root: 28px; /* Reduce the base text size */
-$link-color: #689f38;
+$link-color: #689f38; /* Change links to green */
 ```
 
 *Check out mystyle.scss for more settings I have tweaked here.* 
